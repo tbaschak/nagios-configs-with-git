@@ -15,11 +15,12 @@ Presentation source/download available at [github.com/tbaschak/nagios-configs-wi
 	*	Also involved with the creation and technical operations of WpgIX.
 *	Avid opensource software user/fanatic, and recently, contributor.
 
-# My Life with IPv6
+# My Life with Nagios
 
-*	Running IPv6 since ~2004.
-	*	Over tunnels for many, many years.
-	*	Native IPv6 since December 2012, via Voi Networks BGP address space.
+*	Running Nagios since ~2006.
+	*	Mainly for ISP monitoring.
+	*	Mainly active checks from a central host.
+	*	Also agent based checks (NRPE, )
 *	My own network currently runs IPv6/OSPFv3 routing protocol.
 	*	2604:4280:d00d::/48
 	*	Most ciscodude.net/henchman21.net services are IPv4/IPv6 enabled.
