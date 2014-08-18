@@ -20,11 +20,10 @@ Presentation source/download available at [github.com/tbaschak/nagios-configs-wi
 *	Running Nagios since ~2006.
 	*	Mainly for ISP monitoring.
 	*	Mainly active checks from a central host.
-	*	Also agent based checks (NRPE, )
-*	My own network currently runs IPv6/OSPFv3 routing protocol.
-	*	2604:4280:d00d::/48
-	*	Most ciscodude.net/henchman21.net services are IPv4/IPv6 enabled.
-
+	*	Also agent based checks (NRPE, Salt)
+*	I run 2 distributed Nagios processes.
+	*	1 on Voi Networks (v4/v6)
+	*	1 on Vultr (v4/v6)
 
 
 # Questions / End
