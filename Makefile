@@ -4,7 +4,7 @@ SLIDEOBJS	= $(SRCS:.md=.html)
 PANDOC		= pandoc
 PFLAGS		= -t beamer
 
-.PHONY: all clean slides pdf 
+.PHONY: all clean slides pdf mirror
 
 all: slides $(PDFOBJS)
 	@echo Slides and PDF generated
@@ -24,6 +24,9 @@ cleanpdf:
 
 cleanslides:
 	rm -f $(SLIDEOBJS) 
+
+mirror:
+	git push --mirror github
 
 gh-pages: slides pdf
 	git add nagios-configs-with-git.html nagios-configs-with-git.pdf
