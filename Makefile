@@ -1,4 +1,4 @@
-SRCS		= nagios-configs-with-git.md.md
+SRCS		= nagios-configs-with-git.md
 PDFOBJS		= $(SRCS:.md=.pdf)
 SLIDEOBJS	= $(SRCS:.md=.html)
 PANDOC		= pandoc
