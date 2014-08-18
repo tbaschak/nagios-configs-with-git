@@ -1,4 +1,4 @@
-% Nagios Configs with Git
+% Managing Nagios Configs with Git
 % Theo Baschak
 % Undefined
 
