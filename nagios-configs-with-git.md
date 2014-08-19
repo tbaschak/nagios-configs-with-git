@@ -25,6 +25,11 @@ Presentation source/download available at [github.com/tbaschak/nagios-configs-wi
 	*	1 on Voi Networks (v4/v6)
 	*	1 on Vultr (v4/v6)
 
+# Why Manage Configs w/ Git?
+
+*	Automatically backs up your configs.
+*	Easy to view when changes were made, and what exact changes were made.
+	*	Patches can be made to distribute changes to other instances.
 
 # Questions / End
 
