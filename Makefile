@@ -6,7 +6,7 @@ PFLAGS		= -t beamer
 
 .PHONY: all clean slides pdf mirror
 
-all: slides $(PDFOBJS)
+all: $(SLIDEOBJS)
 	@echo Slides and PDF generated
 
 %.pdf:	%.md
@@ -14,8 +14,12 @@ all: slides $(PDFOBJS)
 
 pdf:  $(PDFOBJS)
 
-slides: 
-	pandoc -V theme=default -s -S -t revealjs --mathjax $(SRCS) -o $(SLIDEOBJS)
+
+%.html: %.md
+#	pandoc -V theme=default -s -S -t revealjs --mathjax $< -o $@
+	pandoc -V theme=sky -s -S -t revealjs --mathjax -V revealjs-url:https://secure.ciscodude.net/vendor/reveal.js $< -o $@
+
+slides: $(SLIDEOBJS)
 
 clean: cleanpdf cleanslides
 
@@ -29,14 +33,13 @@ mirror:
 	git push --mirror github
 
 gh-pages: slides pdf
-	git add nagios-configs-with-git.html nagios-configs-with-git.pdf
+	git add nagios-configs-with-git.html
 	git commit -m 'generate latest slides via Makefile'
 	git push -u origin master
 	git checkout gh-pages
 	git checkout master -- nagios-configs-with-git.html
-	git checkout master -- nagios-configs-with-git.pdf
 	cp nagios-configs-with-git.html index.html
-	git add nagios-configs-with-git.html nagios-configs-with-git.pdf index.html
+	git add nagios-configs-with-git.html index.html
 	git commit -m 'pull in latest generated slides from master branch'
 	git push -u origin gh-pages
 	git checkout master

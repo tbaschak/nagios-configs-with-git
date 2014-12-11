@@ -2,7 +2,6 @@
 % Theo Baschak
 % Undefined
 
-
 # Online HTML5 Slides
 
 Presentation source/download available at [github.com/tbaschak/nagios-configs-with-git](https://github.com/tbaschak/nagios-configs-with-git)
